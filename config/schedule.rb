@@ -5,7 +5,7 @@ every 1.day, :at => "10:00 am" do
   rake "picture:take"
 end
 
-every 1.day :at => "10:30 am" do
+every :sunday :at => "10:30 am" do
   rake "gif:create"
 end
 

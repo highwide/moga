@@ -13,6 +13,7 @@ gem 'slim-rails'
 gem 'whenever', require: false
 gem 'dotenv-rails'
 gem 'rmagick'
+gem 'twitter'
 
 group :development, :test do
   gem 'pry-rails'

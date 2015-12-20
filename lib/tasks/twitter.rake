@@ -1,9 +1,9 @@
 namespace :twitter do
   desc "twitterに画像をupload"
-  task :jpg => :environment do
+  task :upload => :environment do
     date = DateTime.now.strftime('%Y%m%d')
-    file = File.open("./image/jpg/#{date}*.jpg")
-    message = DateTime.now.strftime('%Y年%m月%日の様子です')
+    file = File.open(Dir.glob("./image/jpg/#{date}*.jpg").first)
+    message = "@highwide #{DateTime.now.strftime('%Y年%m月%d日の様子です。')}"
     upload(file, message)
   end
 
@@ -19,7 +19,6 @@ namespace :twitter do
 
     begin
       img = File.open(file)
-      binding.pry
       client.update_with_media(message, img)
     rescue
     end
