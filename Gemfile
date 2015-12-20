@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'whenever', require: false
-gem 'dotenv'
+gem 'dotenv-rails'
 gem 'rmagick'
 
 group :development, :test do
@@ -23,6 +23,6 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  # gem 'spring'
 end
 
